@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kavin | AI & DS Portfolio</title>
+<img src="kavin phota.jpeg" alt="Kavin profile photo"> 
+  <div class="card">
+    <h3>AI assistemt certificate</h3>
+    <img src="AIassistent.jpeg"
+      alt="AI workshop">
+  </div>
+    <div class="card">
+      <h3>UX/UI Figma</h3>
+      <img src="figma design.jpeg"
+        alt="Figma certificate">
+  </div>
+<style>
+* {
+  /* Profile Image CSS */
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #65a5ff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    display: block;
+    margin: 0 auto 25px;
+}
+  /*image*/
+  .card img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+header {
+    background: #101c36;
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #65a5ff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #65a5ff;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Common Sections */
+
+section {
+    padding: 75px 8%;
+    scroll-margin-top: 70px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #142b50;
+    margin-bottom: 35px;
+}
+
+/* Profile */
+
+.hero {
+    min-height: 450px;
+    background: linear-gradient(120deg, #101c36, #245a9b);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    color: #83baff;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #65a5ff;
+    color: #101c36;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* Cards */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    color: #245a9b;
+    margin-bottom: 12px;
+}
+
+/* Education */
+
+.education {
+    background: #eaf1fb;
+}
+
+.mark {
+    font-size: 27px;
+    font-weight: bold;
+    color: #245a9b;
+}
+
+/* Skills */
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.skill-bar {
+    height: 10px;
+    background: #dce5f1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: #357edb;
+    border-radius: 10px;
+}
+
+/* Projects */
+
+.projects {
+    background: #eaf1fb;
+}
+
+.project-number {
+    font-size: 30px;
+}
+
+/* Certificates */
+
+.certificate {
+    border-left: 5px solid #357edb;
+}
+
+/* Footer */
+
+footer {
+    background: #101c36;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsive */
+
+@media(max-width: 768px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #101c36;
+        padding: 20px;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<header>
+    <div class="logo">KAVIN.</div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="navbar">
+        <a href="#profile" onclick="closeMenu()">Profile</a>
+        <a href="#education" onclick="closeMenu()">Education</a>
+        <a href="#skills" onclick="closeMenu()">Skills</a>
+        <a href="#projects" onclick="closeMenu()">Projects</a>
+        <a href="#certificates" onclick="closeMenu()">Certificates</a>
+    </nav>
+</header>
+
+<!-- 1. MY PROFILE -->
+
+<section class="hero" id="profile">
+
+    <h1>Hello, I'm Kavin!</h1>
+
+    <h2>Artificial Intelligence & Data Science Student</h2>
+
+    <p>
+        I am a First-Year B.Tech student at KPRIET.
+        I am interested in Artificial Intelligence,
+        Data Science and innovative technology.
+        I enjoy developing AI-based projects
+        to solve real-world problems.
+    </p>
+
+    <a href="#projects" class="btn">Explore My Projects</a>
+
+</section>
+
+<!-- 2. EDUCATION -->
+
+<section class="education" id="education">
+
+    <h2 class="section-title">My Education</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>College Education</h3>
+            <p>KPRIET - KPR Institute of Engineering and Technology</p>
+            <p>B.Tech - Artificial Intelligence and Data Science</p>
+            <p>First Year</p>
+        </div>
+
+        <div class="card">
+            <h3>12th Standard (HSC)</h3>
+            <div class="mark">514</div>
+            <p>Higher Secondary Education</p>
+        </div>
+
+        <div class="card">
+            <h3>Cut-off Mark</h3>
+            <div class="mark">177</div>
+            <p>Engineering Cut-off</p>
+        </div>
+
+        <div class="card">
+            <h3>10th Standard (SSLC)</h3>
+            <div class="mark">412</div>
+            <p>Secondary School Education</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- 3. SKILLS -->
+
+<section id="skills">
+
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Technical Skills</h3>
+            <div class="skill">
+                <p class="skill-name">Artificial Intelligence</p>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:75%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p class="skill-name">Data Science</p>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:70%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p class="skill-name">Basic Computer Skills</p>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:80%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Professional Skills</h3>
+            <p>✔ Communication Skills</p>
+            <p>✔ Teamwork</p>
+            <p>✔ Problem Solving</p>
+            <p>✔ Creative Thinking</p>
+        </div>
+
+        <div class="card">
+            <h3>Design Skills</h3>
+            <p>✔ UI/UX Design Basics</p>
+            <p>✔ Figma App Designing</p>
+            <p>✔ AI Project Development</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- 4. PROJECTS -->
+
+<section class="projects" id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <div class="project-number">📧</div>
+            <h3>AI-Based Email Threat Detection</h3>
+            <p>
+                An AI-based system that analyzes
+                email subject and body to identify
+                potential email threats and determine
+                email trustworthiness.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="project-number">🌱</div>
+            <h3>AgroVision AI</h3>
+            <p>
+                An AI-based plant disease detection
+                system that analyzes uploaded plant
+                or leaf images and identifies
+                possible diseases.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="project-number">🌧️</div>
+            <h3>Flash Flood Alert System</h3>
+            <p>
+                An AI-based flood risk prediction
+                system that analyzes rainfall amount,
+                rainfall duration and temperature
+                to identify potential flood risks.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- 5. CERTIFICATES -->
+
+<section id="certificates">
+
+    <h2 class="section-title">My Certificates</h2>
+
+    <div class="card-container">
+
+        <div class="card certificate">
+            <h3>UI/UX Figma App Designing Workshop</h3>
+            <p>
+                Participated in a workshop focused
+                on UI/UX design and Figma
+                application designing.
+            </p>
+        </div>
+
+        <div class="card certificate">
+            <h3>Build Your Own AI Assistant Workshop</h3>
+            <p>
+                Participated in a workshop focused
+                on learning and developing
+                AI assistants.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+    <h3>Kavin | Personal Portfolio</h3>
+    <p>B.Tech - Artificial Intelligence and Data Science</p>
+    <p>© 2026 Kavin. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+// Mobile Navigation
+
+function toggleMenu() {
+    document.getElementById("navbar")
+    .classList.toggle("active");
+}
+
+function closeMenu() {
+    document.getElementById("navbar")
+    .classList.remove("active");
+}
+
+// Welcome Message
+
+console.log("Welcome to Kavin's Portfolio Website!");
+
+</script>
+
+</body>
+</html>
